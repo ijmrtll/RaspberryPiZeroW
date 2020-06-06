@@ -69,8 +69,9 @@ if __name__ == '__main__':
         dyson_fan_os_cmd()
         sleep(1)
     if args.set >= 1:
-        dyson_fan_in_cmd(args.set)
+        dyson_fan_set_cmd(args.set)
         sleep(1)
     if args.decre >= 1:
         dyson_fan_de_cmd(args.decre)
         sleep(1)
+    os.system("raspistill -h 500 -w 500 -o ~/digits-opencv/test.jpg")
